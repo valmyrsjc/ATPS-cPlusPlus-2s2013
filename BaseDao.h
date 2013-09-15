@@ -2,8 +2,12 @@
 #define BASEDAO_H
 #include <string>
 #include "AviaoBean.h"
+#define clear "\e[H\e[2J"
+
 using namespace std;
 
-aviao avioes[9999];
+struct data{
+    aviaoBean avioes[9999];
+} AviaoDAO;
 
 #endif // BASEDAO_H

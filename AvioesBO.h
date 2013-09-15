@@ -4,13 +4,17 @@
 #include "AviaoBean.h"
 #include "BaseDao.h"
 #include "helpers.h"
+#include "stdlib.h"
+#include "string.h"
 #include <string>
+#define clear "\e[H\e[2J"
+
 using namespace std;
 
-int setAviao(aviao novoAviao){
+int setAviao(aviaoBean novoAviao){
     for(int i = 0; i< 9999; i++){
-        if(avioes[i].id == 0){
-            avioes[i] = novoAviao;
+        if(AviaoDAO.avioes[i].id == 0){
+            AviaoDAO.avioes[i] = novoAviao;
             break;
         }
     }
@@ -18,14 +22,14 @@ int setAviao(aviao novoAviao){
 }
 
 int deleteAviao(int id){
-    avioes[id].id = 0;
+    AviaoDAO.avioes[id].id = 0;
     return 1;
 }
 
 void getAviao(){
     for(int i = 0; i< 9999; i++){
-        if(avioes[i].id != 0){
-            cout << avioes[i].id << " | " << avioes[i].modelo << " | " << avioes[i].fabricante << " | " << avioes[i].passageiros << " | " << avioes[i].comprimento << " | " << avioes[i].altura << endl;
+        if(AviaoDAO.avioes[i].id != 0){
+            cout << "| " << AviaoDAO.avioes[i].id << " | " << AviaoDAO.avioes[i].modelo << " | " << AviaoDAO.avioes[i].fabricante << " | " << AviaoDAO.avioes[i].passageiros << " | " << AviaoDAO.avioes[i].comprimento << " | " << AviaoDAO.avioes[i].altura << endl;
         }
     }
 }

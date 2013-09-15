@@ -3,11 +3,15 @@ CONFIG += console
 CONFIG -= app_bundle
 CONFIG -= qt
 
-SOURCES += main.cpp
+SOURCES += main.cpp \
+    bk.cpp
 
 HEADERS += \
     AviaoBean.h \
     BaseDao.h \
     helpers.h \
-    AvioesBO.h
+    AvioesBO.h \
+    menubo.h \
+    MenuBO.h \
+    AvioesView.h
 
