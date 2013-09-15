@@ -8,6 +8,6 @@ using namespace std;
 
 struct data{
     aviaoBean avioes[9999];
-} AviaoDAO;
+} BaseDAO;
 
 #endif // BASEDAO_H

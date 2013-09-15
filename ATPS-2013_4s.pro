@@ -11,7 +11,6 @@ HEADERS += \
     BaseDao.h \
     helpers.h \
     AvioesBO.h \
-    menubo.h \
     MenuBO.h \
     AvioesView.h
 

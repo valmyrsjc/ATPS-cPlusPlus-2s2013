@@ -9,15 +9,16 @@
 #include <string>
 #define clear "\e[H\e[2J"
 
-void getAviaoCadastrarView(){
+void getAviaoCadastrarView(int id){
     aviaoBean novoAviao;
 
     cout << clear;
-    cout << "|---Tela Avioes-------------------------------------------| voltar[0] |--|" << endl;
+    cout << "|---Cadastro de Avioes---------------------------------------------------|" << endl;
 
-    cout << "| Informe o id: ";
-    cin >> novoAviao.id;
+    int newId = (id==0)?lenght(BaseDAO.avioes) + 1:id;
 
+    cout << "| Cadastrando o id: " << newId << endl;
+    novoAviao.id = newId;
 
     cout << "| Informe o modelo: ";
     cin >> novoAviao.modelo;
@@ -43,18 +44,45 @@ void getAviaoCadastrarView(){
     cout << "| Informe o motor: ";
     cin >> novoAviao.motor;
 
-    setAviao(novoAviao);
+    if(id==0){
+        setAviao(novoAviao);
+    } else{
+        updateAviao(novoAviao);
+    }
+
 }
 
 string getAviaoListarView(){
     cout << clear;
-    cout << "|---Tela Avioes-------------------------| Cadastrar[1] |--| voltar[0] |--|" << endl;
+    cout << "|---Tela Avioes-----| Edit[e] |--| Delet[d] |--| New[n] |--| voltar[0] |--|" << endl;
     getAviao();
-    cout << "|----------------------------------------------------------------------" << lenght(AviaoDAO.avioes) << "-|" << endl;
+    cout << "|-----------------------------------------------------------------Qtd: " << lenght(BaseDAO.avioes) << "-|" << endl;
     cout << "Opc.: ";
     string opc;
     cin >> opc;
     return opc;
+}
+
+void getDeletarAviaoView(){
+    cout << clear;
+    cout << "|---Deletar Aviao--------------------------------------------------------|" << endl;
+    getAviao();
+    cout << "|-----------------------------------------------------------------Qtd: " << lenght(BaseDAO.avioes) << "-|" << endl;
+    cout << "Informe o id.: ";
+    int opc;
+    cin >> opc;
+    deleteAviao((opc-1));
+}
+
+void getEditAviaoView(){
+    cout << clear;
+    cout << "|---Editar Aviao---------------------------------------------------------|" << endl;
+    getAviao();
+    cout << "|-----------------------------------------------------------------Qtd: " << lenght(BaseDAO.avioes) << "-|" << endl;
+    cout << "Informe o id.: ";
+    int opc;
+    cin >> opc;
+    getAviaoCadastrarView(opc);
 }
 
 #endif // AVIOESVIEW_H

@@ -11,10 +11,15 @@
 
 using namespace std;
 
+int updateAviao(aviaoBean novoAviao){
+    BaseDAO.avioes[(novoAviao.id-1)] = novoAviao;
+    return 1;
+}
+
 int setAviao(aviaoBean novoAviao){
     for(int i = 0; i< 9999; i++){
-        if(AviaoDAO.avioes[i].id == 0){
-            AviaoDAO.avioes[i] = novoAviao;
+        if(BaseDAO.avioes[i].id == 0){
+            BaseDAO.avioes[i] = novoAviao;
             break;
         }
     }
@@ -22,14 +27,14 @@ int setAviao(aviaoBean novoAviao){
 }
 
 int deleteAviao(int id){
-    AviaoDAO.avioes[id].id = 0;
+    BaseDAO.avioes[id].id = 0;
     return 1;
 }
 
 void getAviao(){
     for(int i = 0; i< 9999; i++){
-        if(AviaoDAO.avioes[i].id != 0){
-            cout << "| " << AviaoDAO.avioes[i].id << " | " << AviaoDAO.avioes[i].modelo << " | " << AviaoDAO.avioes[i].fabricante << " | " << AviaoDAO.avioes[i].passageiros << " | " << AviaoDAO.avioes[i].comprimento << " | " << AviaoDAO.avioes[i].altura << endl;
+        if(BaseDAO.avioes[i].id != 0){
+            cout << "| " << BaseDAO.avioes[i].id << " | " << BaseDAO.avioes[i].modelo << " | " << BaseDAO.avioes[i].fabricante << " | " << BaseDAO.avioes[i].passageiros << " | " << BaseDAO.avioes[i].comprimento << " | " << BaseDAO.avioes[i].altura << endl;
         }
     }
 }

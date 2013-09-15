@@ -79,8 +79,6 @@ void getMenu(string menu, string opc){
 
         if(getMenuHome() == "1"){
             getMenu("aviao", "0");
-        } else{
-            cout << clear << "Saindo..." << endl;
         }
 
     } else if (menu == "aviao") {
@@ -89,10 +87,16 @@ void getMenu(string menu, string opc){
 
         if(opc == "x"){
             getMenu("home","0");
-        } else if(opc == "1"){
-            getAviaoCadastrarView();
+        } else if(opc == "1" || opc == "n" || opc == "N"){
+            getAviaoCadastrarView(0);
             getMenu("aviao","0");
         } else if(opc == "2"){
+            getMenu("aviao",getAviaoListarView());
+        } else if (opc == "d" || opc == "D") {
+            getDeletarAviaoView();
+            getMenu("aviao",getAviaoListarView());
+        } else if (opc == "e" || opc == "E") {
+            getEditAviaoView();
             getMenu("aviao",getAviaoListarView());
         }
 
