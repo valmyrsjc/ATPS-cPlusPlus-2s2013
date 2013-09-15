@@ -3,8 +3,7 @@ CONFIG += console
 CONFIG -= app_bundle
 CONFIG -= qt
 
-SOURCES += main.cpp \
-    bk.cpp
+SOURCES += main.cpp
 
 HEADERS += \
     AviaoBean.h \
