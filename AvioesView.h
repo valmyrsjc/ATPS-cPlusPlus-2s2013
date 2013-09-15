@@ -52,6 +52,37 @@ void getAviaoCadastrarView(int id){
 
 }
 
+string getMenuAviao(string opc){
+
+    if(opc == "0"){
+        cout << clear;
+        cout << "|---Tela Aviao--------------------------------------------| voltar[x] |--|" << endl;
+        cout << "|--| Cadastrar[1] |-| Listar[2] |----------------------------------------|" << endl;
+        cout << "|                                                                        |" << endl;
+        cout << "|                                                                        |" << endl;
+        cout << "|                                                                        |" << endl;
+        cout << "|                                                                        |" << endl;
+        cout << "|                                                                        |" << endl;
+        cout << "|                                                                        |" << endl;
+        cout << "|                                                                        |" << endl;
+        cout << "|                                                                        |" << endl;
+        cout << "|                                                                        |" << endl;
+        cout << "|                                                                        |" << endl;
+        cout << "|                                                                        |" << endl;
+        cout << "|                                                                        |" << endl;
+        cout << "|                                                                        |" << endl;
+        cout << "|                                                                        |" << endl;
+        cout << "|                                                                        |" << endl;
+        cout << "|                                                                        |" << endl;
+        cout << "|                                                                        |" << endl;
+        cout << "|------------------------------------------------------------------------|" << endl;
+        cout << "Opc.: ";
+    }
+
+    cin >> opc;
+    return opc;
+}
+
 string getAviaoListarView(){
     cout << clear;
     cout << "|---Tela Avioes-----| Edit[e] |--| Delet[d] |--| New[n] |--| voltar[0] |--|" << endl;

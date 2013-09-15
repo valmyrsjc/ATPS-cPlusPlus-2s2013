@@ -42,37 +42,6 @@ string getMenuHome(){
     return opc;
 }
 
-string getMenuAviao(string opc){
-
-    if(opc == "0"){
-        cout << clear;
-        cout << "|---Tela Aviao--------------------------------------------| voltar[x] |--|" << endl;
-        cout << "|--| Cadastrar[1] |-| Listar[2] |----------------------------------------|" << endl;
-        cout << "|                                                                        |" << endl;
-        cout << "|                                                                        |" << endl;
-        cout << "|                                                                        |" << endl;
-        cout << "|                                                                        |" << endl;
-        cout << "|                                                                        |" << endl;
-        cout << "|                                                                        |" << endl;
-        cout << "|                                                                        |" << endl;
-        cout << "|                                                                        |" << endl;
-        cout << "|                                                                        |" << endl;
-        cout << "|                                                                        |" << endl;
-        cout << "|                                                                        |" << endl;
-        cout << "|                                                                        |" << endl;
-        cout << "|                                                                        |" << endl;
-        cout << "|                                                                        |" << endl;
-        cout << "|                                                                        |" << endl;
-        cout << "|                                                                        |" << endl;
-        cout << "|                                                                        |" << endl;
-        cout << "|------------------------------------------------------------------------|" << endl;
-        cout << "Opc.: ";
-    }
-
-    cin >> opc;
-    return opc;
-}
-
 void getMenu(string menu, string opc){
 
     if(menu == "home"){
