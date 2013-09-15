@@ -34,7 +34,7 @@ int deleteAviao(int id){
 void getAviao(){
     for(int i = 0; i< 9999; i++){
         if(BaseDAO.avioes[i].id != 0){
-            cout << "| " << BaseDAO.avioes[i].id << " | " << BaseDAO.avioes[i].modelo << " | " << BaseDAO.avioes[i].fabricante << " | " << BaseDAO.avioes[i].passageiros << " | " << BaseDAO.avioes[i].comprimento << " | " << BaseDAO.avioes[i].altura << endl;
+            cout << "| " << BaseDAO.avioes[i].id << " | " << BaseDAO.avioes[i].modelo << " | " << BaseDAO.avioes[i].fabricante << " | " << BaseDAO.avioes[i].passageiros << " | " << BaseDAO.avioes[i].comprimento << " | " << BaseDAO.avioes[i].motor << " | " << BaseDAO.avioes[i].altura << " | " << BaseDAO.avioes[i].velocidade << " | " << BaseDAO.avioes[i].altitude << endl;
         }
     }
 }
