@@ -82,7 +82,7 @@ string getMenuAviao(string opc){
     cin >> opc;
     return opc;
 }
-
+/* Listar avião */
 string getAviaoListarView(){
     cout << clear;
     cout << "|---Tela Avioes-----| Edit[e] |--| Delet[d] |--| New[n] |--| voltar[0] |--|" << endl;
